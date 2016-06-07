@@ -1,0 +1,11 @@
+/* Sandbox for reading01_sandbox */
+
+/* Turns the text red for any element with this class */
+.red {
+  color: red;
+}
+
+/* Gives a thin border to any element with this class */
+.solid-border {
+  border: 1px solid black;
+}
