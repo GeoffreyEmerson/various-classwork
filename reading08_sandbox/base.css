@@ -1,0 +1,10 @@
+/* Sandbox for reading08_sandbox */
+
+#flex-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  padding: 0;
+}

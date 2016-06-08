@@ -1,0 +1,6 @@
+/* Sandbox for reading07_sandbox */
+
+#flex-box {
+  display: flex;
+  justify-content: space-around;
+}
