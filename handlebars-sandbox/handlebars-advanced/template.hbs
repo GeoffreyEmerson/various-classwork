@@ -1,0 +1,19 @@
+<h1>Turtle Race Participants</h1>
+
+{{#each racers}}
+
+  <h3>Racer Number: {{id}}</h3>
+  <ul>
+    <li>Name: {{name}}</li>
+    {{#if owner}}
+      <li>Owner: {{owner}}</li>
+    {{/if}}
+    {{#if source}}
+      <li>From: {{source}}</li>
+    {{/if}}
+    {{#if note}}
+      <li>Notes: {{note}}</li>
+    {{/if}}
+  </ul>
+
+{{/each}}
