@@ -1,0 +1,13 @@
+/* Sandbox for app06 */
+
+@import url(remington__RIVIERA__2007.ttf);
+
+div {
+  font-family: 'Typewriter - Remington RIVIERA', fantasy;
+  font-size: 40px;
+}
+
+button {
+  font-size: 70px;
+  margin: 25px
+}
