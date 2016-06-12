@@ -15,7 +15,7 @@ $(document).ready(function() {
     $el.animate({ // start the animation
       width: origWidth * 1.75, // set the destination as an increase of 75%
       height: origHeight * 1.75
-    }, 500); // make the animation last half a second.
+    }, 1000); // make the animation last a full second.
   });
   // set up the reversal of the mouseover function
   $('.colorBox').on('mouseout', function(){
@@ -26,6 +26,6 @@ $(document).ready(function() {
     $el.animate({ // animate back to the original settings
       width: origWidth,
       height: origHeight
-    }, 500); // animate over half a second.
+    }, 100); // animate back to normal over one tenth a second.
   });
 });
