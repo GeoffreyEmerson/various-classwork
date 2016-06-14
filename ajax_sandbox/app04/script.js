@@ -8,7 +8,11 @@ xhr.onload = function() {
   if(xhr.status == 200) {
     var responseObject = JSON.parse(xhr.responseText);
   }
-  callBackFunction(responseObject);
+  // callBackFunction(responseObject);
+  function(responseObject) {
+    var newDiv = $('<div>').text(responseObject.motto);
+    $('body').append(newDiv);
+  });
 };
 
 xhr.open('GET', 'myData.json');
@@ -19,8 +23,5 @@ function callBackFunction(callBackData) {
 }
 
 function printResult(passedData) {
-  passedData.map(function(mapData) {
-    var newDiv = $('<div>').text(mapData.motto);
-    $('body').append(newDiv);
-  });
+  passedData.map(
 }
