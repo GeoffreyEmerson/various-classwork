@@ -1,0 +1,19 @@
+/* Sandbox for app09 */
+
+div{
+  height:50px;
+  width:50px;
+  margin:10px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
