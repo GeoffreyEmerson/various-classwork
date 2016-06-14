@@ -1,16 +1,16 @@
-// Sandbox for app12
+// Sandbox for app13
 
-// [+1.5] A HOF that returns a closure. Your app should call the HOF, then your app should use the closure.
+// [+1] A HOF that returns a function G. G accepts two parameters. Your app should call the HOF, then your app should use the returned function.
 
-function HOF(secret) {
-  var closedFunc = function(val) {
-    return val * secret;
+function HOF() {
+  var G = function(val1,val2) {
+    return val1 * val2;
   };
-  return closedFunc;
+  return G;
 }
 
 $(function() {
-  var closure = HOF(7);
-  var result = closure(6);
+  var funcG = HOF();
+  var result = funcG(6,5);
   console.log(result);
 });
