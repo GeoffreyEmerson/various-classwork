@@ -2,26 +2,20 @@
 
 // Modify #3 to use jQuery's .ajax() to load myData.json, instead of using .getJSON(). Pay attention to the pieces of code you need to make .ajax() behave like .getJSON().
 
-var xhr = new XMLHttpRequest();
+$.ajax({
+  url: 'myData.json',
+  type: 'GET',
+  dataType: 'json'
+})
+.done(F);
 
-xhr.onload = function() {
-  if(xhr.status == 200) {
-    var responseObject = JSON.parse(xhr.responseText);
-  }
-  // callBackFunction(responseObject);
-  function(responseObject) {
-    var newDiv = $('<div>').text(responseObject.motto);
-    $('body').append(newDiv);
-  });
-};
-
-xhr.open('GET', 'myData.json');
-xhr.send(null);
-
-function callBackFunction(callBackData) {
-  printResult(callBackData);
+function F(callBackData) {
+  P(callBackData);
 }
 
-function printResult(passedData) {
-  passedData.map(
+function P(callBackData) {
+  var divArray = callBackData.map(function(datum) {
+    return $('<div>').text(datum.motto);
+  });
+  $('body').append(divArray);
 }

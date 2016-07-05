@@ -3,18 +3,17 @@
 // [+1 E.C.] Extend #3 to include a <button>, and change F to not call P, but register P as an event handler of the <button>. Verify that a button click causes data from myData.json to be printed.
 
 $.getJSON('myData.json')
-  .done(callBackFunction);
+.done(F);
 
-function callBackFunction(callBackData) {
+function F(callBackData) {
   $('button').on('click', function(){
-    printResult(callBackData);
+    P(callBackData);
   });
-
 }
 
-function printResult(passedData) {
-  passedData.map(function(mapData) {
-    var newDiv = $('<div>').text(mapData.motto);
-    $('body').append(newDiv);
+function P(callBackData) {
+  var divArray = callBackData.map(function(datum) {
+    return $('<div>').text(datum.motto);
   });
+  $('body').append(divArray);
 }
